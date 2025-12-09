@@ -1,0 +1,69 @@
+int SkipTo=9;
+
+#include <iostream> 
+#include <iomanip>
+using std::cout; using std::cin; using std::fixed; using std::setprecision;
+int main() {
+
+//ЗАВДАННЯ 6/9
+if (SkipTo==6) {
+
+bool answer=false; int value;
+cout << "Task 6 - Enter a value:"; cin >> value;
+//Код для перевірки
+if (value>=0 && value<10) { answer = true; }
+if ((value*2)<20 && (value-2)>-2) { answer=true; }
+if ((value-1)>1 && (value/2)<10) { answer=true; }
+if (value==111) { answer = true; }
+cout << (answer ? "THAT'S TRUE :) \n" : "THAT'S NOT TRUE :( \n") << std::endl;
+SkipTo=7;
+}
+//ЗАВДАННЯ 7/9
+else if (SkipTo==7) {
+
+float var1; float var2; float var3; float var4; float var5;
+cout << "Print 5 float values: \n";
+cin >> var1; cin >> var2; cin >> var3; cin >> var4; cin >> var5;
+cout << "\n New values: \n";
+cout << var1 << "\n"; // 2.3 > 2.3
+cout << fixed << setprecision(2) << var2 << "\n";
+cout << fixed << setprecision(6) << var3 << "\n"; 
+cout << fixed << setprecision(2) << var4 << "\n";
+cout << (int)var5 << "\n"; 
+
+SkipTo=8;
+}
+
+//ЗАВДАННЯ 8/9
+else if (SkipTo==8) {
+
+int num1; int num2; float float1; float float2; float difference;
+cout <<"Print 1st integer please \n"; cin >> num1;
+cout << "Print 2nd integer please \n"; cin >> num2;
+float1 = (1/ (float)num1); 
+float2 = (1/ (float)num2);
+
+difference = (float1-float2); 
+cout << "[Difference: " << difference << " ] \n";
+if ( (difference) > 0.000001) {
+cout << "Results are not equal (by 0.000001 epsilon) \n"; } 
+else { cout << "Results are equal (by 0.000001 epsilon) \n"; }
+
+SkipTo=9;
+}
+
+else if (SkipTo==9) {
+//ЗАВДАННЯ 9/9
+int apart; int bpart; int cpart; int dpart; 
+cout << "Input 4 numbers to form an ip address \n";
+cin >> apart; cin >> bpart; cin >> cpart; cin >> dpart;
+
+if (apart < 0) { apart=0; } else if (apart > 255) { apart=255; }
+if (bpart < 0) { bpart=0; }  else if (bpart > 255) { bpart=255; }
+if (cpart < 0) { cpart=0; } else if (cpart > 255) { cpart=255; }
+if (dpart < 0) { dpart=0; } else if (dpart > 255) { dpart=255; }
+cout << apart<<"."<<bpart<<"."<<cpart<<"."<<dpart;
+
+}
+
+}
