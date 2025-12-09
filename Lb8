@@ -1,0 +1,72 @@
+#include <iostream>
+#include <algorithm> // для sort
+using namespace std;
+
+int main() {
+    const int m = 12;
+    int a[m];
+
+    cout << "Введіть 12 цілих чисел:\n";
+    for (int i = 0; i < m; i++) {
+        cin >> a[i];
+    }
+
+    // Копії масиву для сортування
+    int ascending[m], descending[m];
+    copy(a, a + m, ascending);
+    copy(a, a + m, descending);
+
+    // Сортування за зростанням
+    sort(ascending, ascending + m);
+
+    // Сортування за спаданням
+    sort(descending, descending + m, greater<int>());
+
+    cout << "\nМасив за зростанням:\n";
+    for (int x : ascending) cout << x << " ";
+
+    cout << "\nМасив за спаданням:\n";
+    for (int x : descending) cout << x << " ";
+
+    return 0;
+}
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Введіть розмір масиву: ";
+    cin >> n;
+
+    int a[n];
+    cout << "Введіть елементи масиву:\n";
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+
+    // 1. Знайти перший максимальний елемент
+    int maxVal = a[0];
+    int maxIndex = 0;
+
+    for (int i = 1; i < n; i++) {
+        if (a[i] > maxVal) {
+            maxVal = a[i];
+            maxIndex = i;
+        }
+    }
+
+    // 2. Замінити нулями від’ємні елементи перед першим максимумом
+    for (int i = 0; i < maxIndex; i++) {
+        if (a[i] < 0) {
+            a[i] = 0;
+        }
+    }
+
+    cout << "\nОновлений масив:\n";
+    for (int i = 0; i < n; i++) {
+        cout << a[i] << " ";
+    }
+
+    return 0;
+}
+
