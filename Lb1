@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double x, y;
+
+    cout << "Введіть x: ";
+    cin >> x;
+
+    y = 3 * x + 7;
+
+    cout << "Результат y = " << y << endl;
+
+    return 0;
+}
+#include <iostream>
+using namespace std;
+
+int main() {
+    double a, b, z;
+
+    cout << "Введіть a: ";
+    cin >> a;
+
+    cout << "Введіть b: ";
+    cin >> b;
+
+    z = (a + b) / 2;
+
+    cout << "Середнє арифметичне = " << z << endl;
+
+    return 0;
+}
