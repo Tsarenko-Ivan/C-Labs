@@ -1,0 +1,89 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double x, y;
+
+    cout << "Обчислення y = sin^5(x) + |5x - 1.5|" << endl;
+    cout << "Введіть 5 значень x:" << endl;
+
+    for (int i = 1; i <= 5; i++) {
+        cout << "x" << i << " = ";
+        cin >> x;
+
+        double sin5 = pow(sin(x), 5);
+        y = sin5 + fabs(5 * x - 1.5);
+
+        cout << "y = " << y << endl;
+    }
+
+    return 0;
+}
+#include <iostream>
+using namespace std;
+
+int main() {
+    long long number;
+    long long product = 1;
+
+    cout << "Введіть 10 натуральних чисел:" << endl;
+
+    for (int i = 1; i <= 10; i++) {
+        cin >> number;
+
+        // Перевірка на натуральність (натуральні = 1,2,3...)
+        if (number <= 0) {
+            cout << "Число повинно бути натуральним! Спробуйте ще раз." << endl;
+            i--; 
+            continue;
+        }
+
+        product *= number;
+    }
+
+    cout << "Добуток = " << product << endl;
+
+    return 0;
+}
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    double a, b, h, x, y;
+
+    cout << "Введіть початок інтервалу a: ";
+    cin >> a;
+    cout << "Введіть кінець інтервалу b: ";
+    cin >> b;
+    cout << "Введіть крок h: ";
+    cin >> h;
+
+    x = a;
+
+    cout << "-----------------------------" << endl;
+    cout << "    X          Y" << endl;
+    cout << "-----------------------------" << endl;
+
+    while (x <= b) {
+
+        // Перевірка ОДЗ
+        if (cos(x) < 0) {
+            cout << "Помилка! cos(x) < 0. Значення x = " << x 
+                 << " не належить ОДЗ. Обчислення припинено." << endl;
+            break;
+        }
+
+        y = sqrt(cos(x)) + sin(x);
+
+        cout << setw(10) << x << "   " << setw(10) << y << endl;
+
+        x += h;
+    }
+
+    cout << "-----------------------------" << endl;
+
+    return 0;
+}
