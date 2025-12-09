@@ -43,3 +43,58 @@ int main() {
 
     return 0;
 }
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int train;
+    cout << "Введіть номер поїзда (1-4): ";
+    cin >> train;
+
+    switch (train) {
+        case 1:
+            cout << "Час відправлення: 08:10" << endl;
+            break;
+        case 2:
+            cout << "Час відправлення: 12:45" << endl;
+            break;
+        case 3:
+            cout << "Час відправлення: 17:30" << endl;
+            break;
+        case 4:
+            cout << "Час відправлення: 22:15" << endl;
+            break;
+        default:
+            cout << "Невідомий номер поїзда!" << endl;
+    }
+
+    return 0;
+#include <iostream>
+using namespace std;
+
+int main() {
+    int book;
+    cout << "Введіть номер книжки (1-4): ";
+    cin >> book;
+
+    switch (book) {
+        case 1:
+            cout << "Автор: Тарас Шевченко\nНазва: Кобзар" << endl;
+            break;
+        case 2:
+            cout << "Автор: Іван Франко\nНазва: Захар Беркут" << endl;
+            break;
+        case 3:
+            cout << "Автор: Михайло Коцюбинський\nНазва: Тіні забутих предків" << endl;
+            break;
+        case 4:
+            cout << "Автор: Леся Українка\nНазва: Лісова пісня" << endl;
+            break;
+        default:
+            cout << "Книжку з таким номером не знайдено!" << endl;
+    }
+
+    return 0;
+}
+
