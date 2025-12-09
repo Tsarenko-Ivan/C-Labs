@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double x, y, Y;
+
+    cout << "Введіть x: ";
+    cin >> x;
+    cout << "Введіть y: ";
+    cin >> y;
+
+    if (x <= 0) {
+        Y = x * x - sin(y);
+    } else {
+        Y = sqrt(x) + cos(y);
+    }
+
+    cout << "Y = " << Y << endl;
+    return 0;
+}
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double x, A, C, Y;
+
+    cout << "Введіть x: ";
+    cin >> x;
+    cout << "Введіть A: ";
+    cin >> A;
+    cout << "Введіть C: ";
+    cin >> C;
+
+    if (A == C) {
+        Y = x * pow((A - C), 3);
+        // або, якщо за вашим варіантом треба x + A^3, скажіть — зміню
+    } else {
+        Y = pow(x, 3) - A;
+    }
+
+    cout << "Y = " << Y << endl;
+    return 0;
+}
